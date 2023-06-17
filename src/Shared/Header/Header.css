@@ -1,0 +1,15 @@
+.nav-logo img{
+    height: auto;
+    width: 150px;
+}
+.navbar-color{
+    background-color: black;
+}
+.nav-btn button{
+    outline: 0;
+    border: 0;
+    background-color: rgb(243, 31, 66);
+    border-radius: 15px;
+    padding: 5px;
+    width: 90px;
+}
