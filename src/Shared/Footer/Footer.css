@@ -1,0 +1,42 @@
+.footer{
+    background-color:rgb(27, 25, 25);
+    color: white;
+}
+.upper-footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    
+}
+.footer-text{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    
+}
+.footer-text a:hover{
+    color: rgb(255, 0, 85);
+}
+
+.upper-footer img{
+    width: 40%;
+}
+
+.lower-footer{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+@media only screen and (max-width:576px){
+    .upper-footer{
+    flex-direction: column;
+    text-align: center;
+}
+
+    .footer-text{
+        margin-top: 40px;
+    flex-direction: column;
+}
+
+}

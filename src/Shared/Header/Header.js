@@ -7,7 +7,7 @@ import navlogo from '../../images/logo.png'
 
 const Header = () => {
     return (
-      <div >
+      <div className='header'>
         <Navbar
           collapseOnSelect
           expand="lg"
