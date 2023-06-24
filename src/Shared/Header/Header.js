@@ -1,21 +1,23 @@
 import React from 'react';
-import {  Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import {  Nav, Navbar} from 'react-bootstrap';
 import './Header.css';
-import './Header.css'
-import logo from '../../images/logo.png';
+import './Header.css';
+import navlogo from '../../images/logo.png'
+
 
 const Header = () => {
     return (
-      <div className="container">
+      <div >
         <Navbar
           collapseOnSelect
           expand="lg"
           className="bg-body-tertiary navbar-color"
           bg="dark"
           data-bs-theme="dark"
+        
         >
-          <Navbar.Brand href="/home" className="nav-logo">
-            <img src={logo} alt="" />
+          <Navbar.Brand href="/" className="nav-logo">
+            <img src={navlogo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

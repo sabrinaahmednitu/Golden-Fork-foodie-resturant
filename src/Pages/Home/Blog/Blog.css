@@ -1,0 +1,40 @@
+.blog-cards{
+      margin-top: 40px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid red;
+}
+
+.blog-card{
+  height: auto;
+  width: 80%;
+   border: 1px solid red;
+}
+
+.blog-img{
+ width: 90%;
+ display: block;
+ margin: auto;
+}
+
+.blog-text{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.blog-text img{
+  margin-right: 15px;
+}
+
+@media only screen and (max-width:576px){
+    .blog-cards{
+    grid-template-columns: repeat(1,1fr);
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width:992px){
+    .blog-cards{
+    grid-template-columns: repeat(2,1fr);
+}
+}
