@@ -1,0 +1,68 @@
+.confirmDelivery{
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 100px;
+}
+
+.d-input {
+    background-color: rgba(214, 210, 210, 0.431);
+   border-radius: 5px;
+   width: 100%;
+   padding: 10px 0;
+  outline: 0;
+  border: 0;
+}
+
+.food-1 img{
+    width: 15%;
+}
+.food{
+    background-color: rgb(231, 229, 229)
+    ;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.food-1 ,.food-text,.food-add {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.food-add span{
+    font-size:30px ;
+}
+.food-add div{
+    font-size:20px ;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+
+.info-btn{
+    background-color: rgb(241, 14, 90) ;
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    
+}
+.PlaceOrder-btn{
+    background-color: rgb(211, 203, 206) ;
+    outline: 0;
+    border: 0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    width: 50%;
+
+}

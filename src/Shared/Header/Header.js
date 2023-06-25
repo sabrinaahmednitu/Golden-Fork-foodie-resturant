@@ -7,14 +7,13 @@ import navlogo from '../../images/logo.png'
 
 const Header = () => {
     return (
-      <div className='header'>
+      <div className='header sticky-top'>
         <Navbar
           collapseOnSelect
           expand="lg"
           className="bg-body-tertiary navbar-color"
           bg="dark"
           data-bs-theme="dark"
-        
         >
           <Navbar.Brand href="/" className="nav-logo">
             <img src={navlogo} alt="" />
@@ -22,7 +21,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/home">Food</Nav.Link>
+              <Nav.Link href="/">Food</Nav.Link>
               <Nav.Link href="/pricing">Pricing</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
             </Nav>
