@@ -1,13 +1,26 @@
-.foodDetailinfo ,.price {
+.foodDetailinfo ,.Q-text {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Q-text{
-     display: flex;
-    justify-content: center;
+.price{
+    display: flex;
     align-items: center;
-    margin-left: 80px;
+    gap: 20%;
+}
+.Q-text{
+    gap: 10px;
+}
+
+.quantity{
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgb(199, 196, 196);
+    font-size: 25px;
+    padding: 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    
 }
 .fooddetail-text{
     width: 50%;
@@ -21,4 +34,23 @@ width: 100%;
 }
 .detail-img{
  width: 100px;
+}
+
+.add-btn{
+    background-color: rgb(236, 18, 84);
+    outline: 0;
+    border: 0;
+    color: white;
+    padding: 10px ;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.four-img{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
 }

@@ -1,0 +1,37 @@
+.chef{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: auto;
+}
+.chef img{
+    width: 70%;
+}
+.chef-text{
+    width: 70%;
+    padding: 10px;
+   display: flex;
+}
+
+/* video */
+
+.chef video{
+    width: 100%;
+}
+.chef-text{
+    width: 50%;
+    padding: 10px;
+    border: 2px solid rgb(212, 209, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.chefs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

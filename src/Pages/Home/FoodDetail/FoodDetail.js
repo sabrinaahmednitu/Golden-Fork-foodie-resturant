@@ -12,8 +12,7 @@ const FoodDetail = () => {
             <h1>Light Breakfast</h1>
             <p>
               It is advised to eat light meals as breakfast to kickstart your
-              metabolism. Overeating can imbalance agni, leading to discomfort
-              like acidity, acid reflux or lethargy among others. Lunchtime is
+              metabolism.  Lunchtime is
               when you should take a break and enjoy a hearty meal without being
               distracted by other activities.
             </p>
@@ -27,9 +26,9 @@ const FoodDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="add-btn">
-              <button>
-                <i class="fa-regular fa-cart-shopping"></i> Add
+            <div className='mt-5 mb-5' >
+              <button className="add-btn">
+                <i class="fa-regular fa-cart-shopping"></i> Add to cart
               </button>
             </div>
             <div className="four-img">
