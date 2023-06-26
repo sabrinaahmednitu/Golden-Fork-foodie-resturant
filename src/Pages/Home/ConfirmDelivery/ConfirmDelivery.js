@@ -81,7 +81,7 @@ const ConfirmDelivery = () => {
             </div>
           </div>
         </div>
-        <div className="food">
+        <div className=" food ">
           <div className="food-1">
             <img src={food1} alt="" />
             <div className="food-text">

@@ -1,10 +1,10 @@
-.login{
+.signup{
     width: 50%;
     margin: auto;
     margin-top: 15%;
     margin-bottom: 15%;
 }
-.login-btn{
+.signup-btn{
       display: block;
     margin: auto;
     margin-top: 20px;
@@ -15,16 +15,4 @@
     padding:  10px;
     border-radius: 10px ;
     width: 50%;
-}
-
-.or{
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.or span{
-    display: block;
-    line-height: 20px;
 }
