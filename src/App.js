@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import ConfirmDelivery from './Pages/Home/ConfirmDelivery/ConfirmDelivery';
 import Signup from './Pages/Signup/Signup';
 import FoodDetail from './Pages/Home/FoodDetail/FoodDetail';
+import Lunchs from './Pages/Home/FoodForDay/Lunch/Lunchs';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           path="/placeorder"
           element={<ConfirmDelivery></ConfirmDelivery>}
         ></Route>
-        <Route path="/fooddetail" element={<FoodDetail></FoodDetail>}></Route>
+        <Route path="/lunchs/:lunchsId" element={<FoodDetail></FoodDetail>}></Route>
+        <Route path="/lunchs" element={<Lunchs></Lunchs>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

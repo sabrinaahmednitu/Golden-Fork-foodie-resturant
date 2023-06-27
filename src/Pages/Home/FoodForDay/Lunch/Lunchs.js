@@ -19,7 +19,6 @@ const Lunchs = () => {
             ))}
           </div>
         </div>
-        <button className="food-btn">Checkout Your Food</button>
       </div>
     );
 };
