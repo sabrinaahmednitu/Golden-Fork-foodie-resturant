@@ -1,20 +1,45 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 
 const Login = () => {
+
+  const emailRef = useRef('');
+  const passRef = useRef('');
+
+  const navigate = useNavigate();
+  const navigateToSignup = () => {
+    navigate('/signup')
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passRef.current.value;
+    console.log(email,password)
+  }
+
     return (
       <div className="login">
-        <h2 className='text-center' >Login</h2>
-        <Form>
+        <h2 className="text-center">Login</h2>
+        <Form className="w-50 mx-auto" onSubmit={handleSubmit} >
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control
+              ref={emailRef}
+              type="email"
+              placeholder="Enter email"
+            />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control
+              ref={passRef}
+              type="password"
+              placeholder="Password"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" />
@@ -28,7 +53,12 @@ const Login = () => {
           <span> OR</span>
           <span> _______________</span>
         </div>
-        <p className='text-center' >If you don't have any account ? <a href="/signup">Please signup</a> </p>
+        <p className="text-center">
+          If you don't have any account ?{' '}
+          <Link to="/signup" onClick={navigateToSignup}>
+            Please signup
+          </Link>{' '}
+        </p>
       </div>
     );
 };
