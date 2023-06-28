@@ -1,9 +1,14 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Signup.css';
+import auth from '../../firebase.init';
 
 const Signup = () => {
+
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
     const nameRef = useRef('');
     const emailRef = useRef('');
@@ -14,29 +19,38 @@ const Signup = () => {
       const name = nameRef.current.value;
       const email = emailRef.current.value;
       const password = passRef.current.value;
-      console.log(name ,email, password);
+     createUserWithEmailAndPassword(name, email, password);
     };
 
   const navigate = useNavigate();
   const navigateToSignup = () => {
-    navigate('/home');
+    navigate('/login');
   };
+
+  // if (user) {
+  //   navigate('/home')
+  // }
+  // if (error) {
+  //   console.log(error);
+  // }
 
   return (
     <div className="signup">
       <h1 className="text-center mb-3">Sign up</h1>
       <Form className="w-50 mx-auto" onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-          <Form.Control type="text" placeholder="Enter name" />
+          <Form.Control ref={nameRef} type="text" placeholder="Enter name" />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control ref={passRef} type="password" placeholder="Password" />
         </Form.Group>
+
+        {/* {error} */}
         <button className="signup-btn" type="submit">
           Signup
         </button>
