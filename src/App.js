@@ -5,11 +5,12 @@ import Header from './Shared/Header/Header';
 import Footer from './Shared/Footer/Footer';
 import Home from './Pages/Home/Home/Home';
 import About from './Pages/About/About';
-import Login from './Pages/Login/Login';
 import ConfirmDelivery from './Pages/Home/ConfirmDelivery/ConfirmDelivery';
 import Signup from './Pages/Signup/Signup';
 import FoodDetail from './Pages/Home/FoodDetail/FoodDetail';
 import Lunchs from './Pages/Home/FoodForDay/Lunch/Lunchs';
+import NotFound from './Shared/NotFound/NotFound';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         ></Route>
         <Route path="/lunchs/:lunchsId" element={<FoodDetail></FoodDetail>}></Route>
         <Route path="/lunchs" element={<Lunchs></Lunchs>}></Route>
+        <Route path="*" element={<NotFound></NotFound>} ></Route>
       </Routes>
       <Footer></Footer>
     </div>

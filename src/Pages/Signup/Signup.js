@@ -1,39 +1,20 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import './Signup.css';
-import auth from '../../firebase.init';
+import { Link } from 'react-router-dom';
+import './Signup.css'
 
 const Signup = () => {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
-
-    const nameRef = useRef('');
-    const emailRef = useRef('');
-    const passRef = useRef('');
-
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      const name = nameRef.current.value;
-      const email = emailRef.current.value;
-      const password = passRef.current.value;
-     createUserWithEmailAndPassword(name, email, password);
-    };
-
-  const navigate = useNavigate();
-  const navigateToSignup = () => {
-    navigate('/login');
-  };
-
-  // if (user) {
-  //   navigate('/home')
-  // }
-  // if (error) {
-  //   console.log(error);
-  // }
-
+  const handleSubmit=(event)=>{
+    event.preventDefault();
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    console.log(name, email, password);
+  }
   return (
     <div className="signup">
       <h1 className="text-center mb-3">Sign up</h1>
@@ -43,11 +24,16 @@ const Signup = () => {
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
+          <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Control ref={passRef} type="password" placeholder="Password" />
+          <Form.Control
+            ref={passwordRef}
+            type="password"
+            placeholder="Password"
+            required
+          />
         </Form.Group>
 
         {/* {error} */}
@@ -69,10 +55,7 @@ const Signup = () => {
       </button>
 
       <p className="text-center mt-3">
-        Already have an account ?{' '}
-        <Link to="/login" onClick={navigateToSignup}>
-          Please Login
-        </Link>
+        Already have an account ? <Link to="/login" className='text-decoration-none' >Please Login</Link>
       </p>
     </div>
   );
